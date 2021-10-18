@@ -11,13 +11,28 @@ There are two versions of SIC,
 
 In this repository, I implement the assembler of the latter.
 
+SIC-XE instruction format : 
+
+| 指令格式 |  | | | 長度 |
+| ---|---|---|---|---|
+| Type1 | Opcode : 8bits | | | 8bits |
+| Type2 | Opcode : 8bits | Register1 : 4bits | Register2 : 4bits | 16bits |
+| Type3 | Opcode : 6bits | n	i	x	b	p	e : 6bits | displacement : 12bits | 24bits |
+| Type4 | Opcode : 6bits | n	i	x	b	p	e : 6bits | address : 20bits | 32bits |
+
+demo picture : 
+
+<pre>
+                    input                                                       output(result)
+</pre>
+
+![image](https://user-images.githubusercontent.com/71260071/137664721-900a8745-34fd-46a0-8815-721a8c6e10c7.png)
+
 # Requirements 
 packages:
 - numpy
 
 # Usage 
-(not finished yet)
-
 1.Open git bash. 
 
 2.Change the diretory where you want to do download this repository.
@@ -34,18 +49,16 @@ packages:
 ```
 5.Execute the program.
 ```
-> python .py
+> python SICXE.py
 ```
 
 
 # Project Structure
-(not finished yet)
-
 ```
 (Path)                                	 (Description)
 SIC-XE-Assembler                         main folder     
 │  │
-│  ├ .py                                 main program 
+│  ├ SICXE.py                            main program 
 │  │
 │  ├ input                               input directory
 │  │  │
